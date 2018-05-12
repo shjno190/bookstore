@@ -1,0 +1,24 @@
+﻿@model IEnumerable<bookstore.Models.SACH>
+@{
+    ViewBag.Title = "SPTheochude";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3>SP Theo Chu De</h3>
+<div class="row">
+    @foreach (var sach in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+            <a href="@Url.Action("Details","BookStore",new {  id= sach.Masach})">
+                <img alt="@sach.Tensach" src="~/img/@sach.Hinhminhhoa" width="150" />
+                <br />
+                <h4 style="text-align:center">
+                <span>@sach.Tensach</span>
+                    </h4>
+            </a>
+                </div>
+        </div>
+    }
+</div>
+

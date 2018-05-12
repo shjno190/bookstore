@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="~/Scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/script.js"></script>
+    <script type="text/javascript" src="~/Scripts/cufon-yui.js"></script>
+    <script type="text/javascript" src="~/Scripts/arial.js"></script>
+    <script type="text/javascript" src="~/Scripts/cuf_run.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="main_resize">
+            <div class="header">
+                <div class="logo">
+                    <h1><a href="#"><span>   BOOK</span>STORE<br/><small>Ngô Quang Thế 15DH110079</small></a></h1>
+                </div>
+                <div class="search">
+                    <form method="get" id="search" action="#">
+                        <span>
+                            <input type="text" value="Tìm sách..." name="s" id="s" />
+                            <input name="searchsubmit" type="image" src="~/img/search.gif" value="Go" id="searchsubmit" class="btn" />
+                        </span>
+                    </form>
+                    <!--/searchform -->
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+                <div class="menu_nav">
+                    <ul>
+                        <li class="active"><a href="index.html">Trang chủ</a></li>
+                        <li><a href="support.html">Hỗ trợ</a></li>
+                        <li><a href="about.html">Giới Thiệu</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                    <div class="clr"></div>
+                </div>
+                <div class="hbg"><img src="~/img/header_images.jpg" width="923" height="291" alt="" /></div>
+            </div>
+            <div class="content">
+                <div class="content_bg">
+                    <div class="mainbar">
+                        <div>
+                            @RenderBody()
+                        </div>                        
+                    </div>
+                    <div class="sidebar">
+                        <div class="gadget">
+                            @Html.Action("Chude","BookStore")
+                        </div>
+                        <div class="gadget">
+                            @Html.Action("Nhaxuatban", "BookStore")
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+        <div class="fbg">
+            <div class="fbg_resize">
+                <div class="col c1">
+                    <h2><span>Sách</span></h2>
+                    <a href="#"><img src="~/img/pic_1.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="~/img/pic_2.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="~/img/pic_3.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="~/img/pic_4.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="~/img/pic_5.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="~/img/pic_6.jpg" width="58" height="58" alt="" /></a>
+                </div>
+                <div class="col c2">
+                    <h2><span>Địa chỉ</span></h2>
+                    <p>
+                        Địa chỉ văn phòng: 52 Út Tịch, phường 4, quận Tân Bình, thành phố Hồ Chí Minh<br />
+                        Bookstorethebee.vn nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ mua và nhận hàng trực tiếp tại văn phòng hoặc trung tâm xử lý đơn hàng
+                    </p>
+                </div>
+                <div class="col c3">
+                    <h2><span>Liên hệ</span></h2>
+                    <p>Địa chỉ gửi hàng đổi/trả/bảo hành: Trung tâm xử lý đơn hàng TIKI - 367/F370 Đường Bạch Đằng, P.2, Q.Tân Bình TP. Hồ Chí Minh<br /> <a href="#">Tìm hiểu...</a></p>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_resize">
+            <p class="lf">&copy; Copyright <a href="#">MyWebSite</a>.</p>
+            <p class="rf">Layout by Rocket <a href="http://www.rocketwebsitetemplates.com/">Website Templates</a></p>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div align=center>Design by <a href='https://www.facebook.com/shjno197'>Thế Bee</a></div>
+    
+</body>
+</html>
